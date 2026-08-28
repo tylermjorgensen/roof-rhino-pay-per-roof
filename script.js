@@ -1,45 +1,83 @@
-const progressBar = document.getElementById("progress-bar");
+const underwritingDialog = document.getElementById("underwriting-dialog");
+const termsDialog = document.getElementById("terms-dialog");
 const mapDialog = document.getElementById("map-dialog");
-const nextDialog = document.getElementById("next-dialog");
-const copyBrief = document.getElementById("copy-brief");
+const copyChecklistButton = document.getElementById("copy-checklist");
+const contractValueInput = document.getElementById("contract-value");
+const feeOutput = document.getElementById("fee-output");
+const multipleOutput = document.getElementById("multiple-output");
+const remainderOutput = document.getElementById("remainder-output");
+const planButtons = [...document.querySelectorAll("[data-fee]")];
 
-const setProgress = () => {
-  const available = document.documentElement.scrollHeight - window.innerHeight;
-  const percent = available > 0 ? Math.min((window.scrollY / available) * 100, 100) : 0;
-  progressBar.style.width = `${percent}%`;
+let selectedFee = 3000;
+
+const formatCurrency = (value) =>
+  new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 0,
+  }).format(value);
+
+const updateEconomics = () => {
+  const contractValue = Math.max(Number(contractValueInput.value) || 0, 0);
+  const multiple = selectedFee > 0 ? contractValue / selectedFee : 0;
+  const remainder = Math.max(contractValue - selectedFee, 0);
+
+  feeOutput.textContent = formatCurrency(selectedFee);
+  multipleOutput.textContent = `${multiple.toFixed(1)}×`;
+  remainderOutput.textContent = formatCurrency(remainder);
 };
 
-window.addEventListener("scroll", setProgress, { passive: true });
-setProgress();
-
-document.querySelectorAll("[data-open-map]").forEach((button) => {
-  button.addEventListener("click", () => mapDialog.showModal());
-});
-
-document.querySelector("[data-close-map]").addEventListener("click", () => mapDialog.close());
-
-document.querySelectorAll("[data-open-next-step]").forEach((button) => {
-  button.addEventListener("click", () => nextDialog.showModal());
-});
-
-document.querySelector("[data-close-next]").addEventListener("click", () => nextDialog.close());
-
-[mapDialog, nextDialog].forEach((dialog) => {
-  dialog.addEventListener("click", (event) => {
-    if (event.target === dialog) dialog.close();
+planButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    selectedFee = Number(button.dataset.fee);
+    planButtons.forEach((item) => item.classList.toggle("is-selected", item === button));
+    updateEconomics();
   });
 });
 
-copyBrief.addEventListener("click", async () => {
+contractValueInput.addEventListener("input", updateEconomics);
+updateEconomics();
+
+const bindDialog = ({ dialog, openSelector, closeSelector }) => {
+  document.querySelectorAll(openSelector).forEach((button) => {
+    button.addEventListener("click", () => dialog.showModal());
+  });
+
+  document.querySelector(closeSelector).addEventListener("click", () => dialog.close());
+
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+};
+
+bindDialog({
+  dialog: underwritingDialog,
+  openSelector: "[data-open-underwriting]",
+  closeSelector: "[data-close-underwriting]",
+});
+
+bindDialog({
+  dialog: termsDialog,
+  openSelector: "[data-open-terms]",
+  closeSelector: "[data-close-terms]",
+});
+
+bindDialog({
+  dialog: mapDialog,
+  openSelector: "[data-open-map]",
+  closeSelector: "[data-close-map]",
+});
+
+copyChecklistButton.addEventListener("click", async () => {
   const checklist = [
     "PAY PER ROOF — ROOFMAP UNDERWRITING CHECKLIST",
-    "1. Service territory and preferred zip codes",
+    "1. Service territory and preferred ZIP codes",
     "2. Average replacement value and minimum project value",
-    "3. Roof types and replacement/repair mix",
+    "3. Roof types and replacement-to-repair mix",
     "4. Weekly inspection availability",
     "5. Sales and production capacity",
     "6. Historical inspection-to-sale close rate",
-    "7. Licensing, insurance, financing, and payment pathways",
+    "7. Licensing, insurance, and payment pathways",
     "8. Target launch date",
   ].join("\n");
 
@@ -66,8 +104,8 @@ copyBrief.addEventListener("click", async () => {
     fallback.remove();
   }
 
-  copyBrief.textContent = copied ? "Checklist copied" : "Copy unavailable — ask your presenter";
+  copyChecklistButton.textContent = copied ? "Checklist copied" : "Copy unavailable";
   window.setTimeout(() => {
-    copyBrief.textContent = "Copy the underwriting checklist";
-  }, 2600);
+    copyChecklistButton.textContent = "Copy underwriting checklist";
+  }, 2400);
 });
