@@ -18,78 +18,7 @@
       <a href="#top" class="topbar__brand" aria-label="Roof Rhino sales page home">
         <img src="../assets/roof-rhino-wordmark.png" alt="Roof Rhino — Roofing Growth Partners">
       </a>
-      <button class="offer-button" type="button" data-toggle-pricing aria-expanded="false" aria-controls="pricing-drawer">
-        See pricing breakdown <span aria-hidden="true">↓</span>
-      </button>
     </header>
-
-    <section class="pricing-drawer" id="pricing-drawer" aria-hidden="true" inert>
-      <div class="pricing-drawer__inner">
-        <div class="pricing-heading">
-          <p class="pill">Pay Per Roof™ pricing</p>
-          <h2>Choose how you fund customer acquisition.</h2>
-          <p>Every option includes the same service. Only the funding method and per-roof rate change.</p>
-        </div>
-        <div class="pricing-grid">
-          <article class="price-card">
-            <div class="price-card__head">
-              <span>Option 01</span>
-              <h3>Flex</h3>
-              <p>Pay as each roof verifies.</p>
-            </div>
-            <ul>
-              <li>Full acquisition system</li>
-              <li>No prepaid Roof Credits</li>
-              <li>Fee earned at RoofLock™</li>
-              <li>Territory protection</li>
-            </ul>
-            <div class="price-card__foot">
-              <strong>$3,000</strong>
-              <span>per Verified Won Roof</span>
-              <button type="button" data-open-underwriting>Check territory <b aria-hidden="true">→</b></button>
-            </div>
-          </article>
-
-          <article class="price-card price-card--featured">
-            <div class="price-card__head">
-              <span>Option 02 · Most popular</span>
-              <h3>Roof Reserve 5</h3>
-              <p>Prepay five Roof Credits.</p>
-            </div>
-            <ul>
-              <li>Full acquisition system</li>
-              <li>5 Roof Credits included</li>
-              <li>Credits used at RoofLock™</li>
-              <li>Territory protection</li>
-            </ul>
-            <div class="price-card__foot">
-              <strong>$13,500</strong>
-              <span>$2,700 per Verified Won Roof</span>
-              <button type="button" data-open-underwriting>Check territory <b aria-hidden="true">→</b></button>
-            </div>
-          </article>
-
-          <article class="price-card">
-            <div class="price-card__head">
-              <span>Option 03 · Best rate</span>
-              <h3>Roof Reserve 10</h3>
-              <p>Prepay ten Roof Credits.</p>
-            </div>
-            <ul>
-              <li>Full acquisition system</li>
-              <li>10 Roof Credits included</li>
-              <li>Credits used at RoofLock™</li>
-              <li>Territory protection</li>
-            </ul>
-            <div class="price-card__foot">
-              <strong>$24,000</strong>
-              <span>$2,400 per Verified Won Roof</span>
-              <button type="button" data-open-underwriting>Check territory <b aria-hidden="true">→</b></button>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
 
     <main id="top">
       <section class="hero dark-panel">
@@ -99,11 +28,6 @@
           <p class="hero__kicker">Pay Per Roof™ customer acquisition</p>
           <h1>Stop paying for leads.<br><em>Pay for roofs.</em></h1>
           <p class="hero__sub">We acquire the homeowner, qualify the opportunity, support the conversion, and earn our fee when the roof becomes verified business.</p>
-
-          <button class="hero-pricing-button" type="button" data-toggle-pricing aria-expanded="false" aria-controls="pricing-drawer">
-            See pricing breakdown <span aria-hidden="true">↓</span>
-          </button>
-          <p class="hero-pricing-note">Three options. Same full-service acquisition system.</p>
 
           <div class="hero-stats">
             <div><strong>$0</strong><span>Traditional marketing retainer</span></div>
@@ -332,7 +256,78 @@
           <p class="section-tag">One market. One partner.</p>
           <h2>Is your territory worth entering?</h2>
           <p>Bring your service area, average roof value, inspection capacity, production capacity, and close rate. RoofMap™ will test the rest.</p>
-          <button class="primary-cta" type="button" data-open-underwriting>Start RoofMap™ underwriting <span aria-hidden="true">→</span></button>
+          <button class="primary-cta pricing-trigger" type="button" data-toggle-pricing aria-expanded="false" aria-controls="pricing-drawer">
+            See Pay Per Roof™ pricing <span aria-hidden="true">↓</span>
+          </button>
+          <small>Three options. Same full-service acquisition system.</small>
+        </div>
+      </section>
+
+      <section class="pricing-drawer" id="pricing-drawer" aria-hidden="true" inert>
+        <div class="pricing-drawer__inner">
+          <div class="pricing-heading">
+            <p class="pill">Pay Per Roof™ pricing</p>
+            <h2>Choose how you fund customer acquisition.</h2>
+            <p>Every option includes the same service. Only the funding method and per-roof rate change.</p>
+          </div>
+          <div class="pricing-grid">
+            <article class="price-card">
+              <div class="price-card__head">
+                <span>Option 01</span>
+                <h3>Flex</h3>
+                <p>Pay as each roof verifies.</p>
+              </div>
+              <ul>
+                <li>Full acquisition system</li>
+                <li>No prepaid Roof Credits</li>
+                <li>Fee earned at RoofLock™</li>
+                <li>Territory protection</li>
+              </ul>
+              <div class="price-card__foot">
+                <strong>$3,000</strong>
+                <span>per Verified Won Roof</span>
+                <button type="button" data-open-underwriting>Check territory <b aria-hidden="true">→</b></button>
+              </div>
+            </article>
+
+            <article class="price-card price-card--featured">
+              <div class="price-card__head">
+                <span>Option 02 · Most popular</span>
+                <h3>Roof Reserve 5</h3>
+                <p>Prepay five Roof Credits.</p>
+              </div>
+              <ul>
+                <li>Full acquisition system</li>
+                <li>5 Roof Credits included</li>
+                <li>Credits used at RoofLock™</li>
+                <li>Territory protection</li>
+              </ul>
+              <div class="price-card__foot">
+                <strong>$13,500</strong>
+                <span>$2,700 per Verified Won Roof</span>
+                <button type="button" data-open-underwriting>Check territory <b aria-hidden="true">→</b></button>
+              </div>
+            </article>
+
+            <article class="price-card">
+              <div class="price-card__head">
+                <span>Option 03 · Best rate</span>
+                <h3>Roof Reserve 10</h3>
+                <p>Prepay ten Roof Credits.</p>
+              </div>
+              <ul>
+                <li>Full acquisition system</li>
+                <li>10 Roof Credits included</li>
+                <li>Credits used at RoofLock™</li>
+                <li>Territory protection</li>
+              </ul>
+              <div class="price-card__foot">
+                <strong>$24,000</strong>
+                <span>$2,400 per Verified Won Roof</span>
+                <button type="button" data-open-underwriting>Check territory <b aria-hidden="true">→</b></button>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
     </main>

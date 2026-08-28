@@ -9,21 +9,22 @@
     "viewport": "1440x900",
     "screenshots": [
       "desktop-hero.png",
-      "desktop-full.png",
+      "desktop-bottom.png",
       "desktop-pricing.png"
     ],
     "horizontalOverflow": false,
     "brokenImages": 0,
     "pricingReveal": "pass",
-    "pricingButtonsVisible": 2
+    "pricingButtonsVisible": 1,
+    "pricingButtonPlacement": "bottom closing section",
+    "pricingDrawerPlacement": "directly after closing section"
   },
   "mobile": {
     "viewport": "375x812",
     "screenshots": [
       "mobile-hero.png",
-      "mobile-full.png",
-      "mobile-pricing.png",
-      "mobile-dialog.png"
+      "mobile-bottom.png",
+      "mobile-pricing.png"
     ],
     "horizontalOverflow": false,
     "brokenImages": 0,
@@ -35,8 +36,7 @@
     "inventedCustomerResults": false,
     "illustrativeEconomicsLabeled": true,
     "ctaVisible": true,
-    "heroPricingButtonVisible": true,
-    "pricingControlsSynchronized": true
+    "pricingButtonOnlyAtBottom": true
   },
   "hardFails": [],
   "softFails": [],
