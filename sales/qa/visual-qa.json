@@ -1,0 +1,41 @@
+{
+  "reference": {
+    "source": "/var/lib/tyler-workspace/state/media/0e48b0f1-4bf9-46bd-9f60-b400e1b2c7ee.pdf",
+    "pagesReviewed": [1, 2, 3, 4, 5, 6, 7, 9, 10],
+    "structuralMatch": "pass",
+    "notes": "Matched the reference's dark opener, proof tiles, four-part overview, alternating detailed steps, ownership section, economics and guarantee block, dense closing wall, and expandable pricing presentation. Ascension claims were replaced with Roof Rhino's approved offer terms."
+  },
+  "desktop": {
+    "viewport": "1440x900",
+    "screenshots": [
+      "desktop-hero.png",
+      "desktop-full.png",
+      "desktop-pricing.png"
+    ],
+    "horizontalOverflow": false,
+    "brokenImages": 0,
+    "pricingReveal": "pass"
+  },
+  "mobile": {
+    "viewport": "375x812",
+    "screenshots": [
+      "mobile-hero.png",
+      "mobile-full.png",
+      "mobile-pricing.png",
+      "mobile-dialog.png"
+    ],
+    "horizontalOverflow": false,
+    "brokenImages": 0,
+    "pricingReveal": "pass",
+    "underwritingDialog": "pass"
+  },
+  "content": {
+    "placeholderCopy": false,
+    "inventedCustomerResults": false,
+    "illustrativeEconomicsLabeled": true,
+    "ctaVisible": true
+  },
+  "hardFails": [],
+  "softFails": [],
+  "verdict": "pass"
+}
