@@ -1,0 +1,58 @@
+{
+  "run_date": "2026-08-28",
+  "status": "pass",
+  "targets": {
+    "desktop": {
+      "viewport": "1440x900",
+      "screenshot": "qa/desktop-1440x900-final.png",
+      "horizontal_overflow": false,
+      "broken_images": 0
+    },
+    "mobile": {
+      "viewport": "375x812",
+      "screenshot": "qa/mobile-375x812-final.png",
+      "horizontal_overflow": false,
+      "broken_images": 0,
+      "tap_targets_below_44px": 0
+    },
+    "diagram": {
+      "source": "artifacts/diagrams/pay-per-roof-engine.d2",
+      "svg": "artifacts/diagrams/pay-per-roof-engine.svg",
+      "png": "artifacts/diagrams/pay-per-roof-engine.png",
+      "png_dimensions": "12372x2994",
+      "overlapping_nodes_or_labels": false,
+      "cropped_content": false,
+      "unresolved_branches": false
+    }
+  },
+  "functional_checks": {
+    "html_validate": "pass",
+    "javascript_syntax": "pass",
+    "d2_compile": "pass",
+    "empty_links": 0,
+    "placeholder_copy_hits": 0,
+    "faq_toggle": "pass",
+    "plan_selection_state": "pass",
+    "system_map_modal": "pass",
+    "underwriting_modal": "pass",
+    "clipboard_action": "pass with trusted user click"
+  },
+  "content_checks": {
+    "pricing_math": "pass",
+    "rooflock_fee_trigger_consistency": "pass",
+    "guarantee_conditions_consistency": "pass",
+    "partner_responsibility_split": "pass",
+    "illustrative_proof_disclosure": "visible and explicit"
+  },
+  "hard_fails_fixed": [
+    "Removed horizontal overflow from decorative elements",
+    "Removed reveal-state blank sections from full-page rendering",
+    "Recomposed the initial over-wide system diagram",
+    "Raised mobile interactive targets to at least 44px",
+    "Replaced non-semantic comparison/list markup with native elements",
+    "Added a local-preview clipboard fallback"
+  ],
+  "remaining_hard_fails": [],
+  "soft_fails": [],
+  "release_note": "Illustrative scenarios and composite quotes must be replaced with verified customer evidence before public advertising."
+}

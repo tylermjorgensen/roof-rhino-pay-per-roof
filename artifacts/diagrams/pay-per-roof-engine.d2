@@ -1,0 +1,169 @@
+direction: right
+
+title: |md
+  # PAY PER ROOF™ — ONE ENGINE, ONE FEE TRIGGER
+  Internal execution + roofing-partner handoff + homeowner journey
+| {
+  near: top-center
+  shape: text
+  style.font-size: 30
+  style.bold: true
+  style.font-color: "#07172B"
+}
+
+partner_inputs: "ROOFING PARTNER\nTerritory • capacity • close rate\nproject value • production" {
+  style.fill: "#0B1C33"
+  style.stroke: "#0B1C33"
+  style.font-color: "#FFFFFF"
+  style.font-size: 15
+  style.bold: true
+  style.border-radius: 9
+}
+
+roofmap: "01  ROOFMAP™\nUNDERWRITE THE MARKET\n\nROOF RHINO\nModel territory, competition,\ncapacity, value, and economics\n\nDECISION GATE\nApprove • adjust • decline\n\nOUTPUT\nQualifying-roof definition, price,\nLaunch Date, protected territory" {
+  style.fill: "#EAF3FF"
+  style.stroke: "#0878FF"
+  style.stroke-width: 3
+  style.font-color: "#0B294B"
+  style.font-size: 15
+  style.bold: true
+  style.border-radius: 12
+  style.shadow: true
+}
+
+buyerproof: "02  BUYERPROOF™\nACQUIRE + QUALIFY\n\nROOF RHINO\nCreate demand; verify owner, location,\nneed, project type, timing, property,\npayment pathway, and availability\n\nPARTNER\nMaintain inspection capacity\n\nOUTPUT\nVerified roofing opportunity" {
+  style.fill: "#0878FF"
+  style.stroke: "#0054D8"
+  style.stroke-width: 3
+  style.font-color: "#FFFFFF"
+  style.font-size: 15
+  style.bold: true
+  style.border-radius: 12
+  style.shadow: true
+}
+
+closeloop: "03  CLOSELOOP™\nMOVE TO DISPOSITION\n\nROOF RHINO\nCall • text • schedule • confirm\nremind • recover • reschedule • nurture\n\nROOFING PARTNER\nInspect • scope • estimate • present • close\n\nSHARED PIPELINE\nVisible until won, lost, or nurture" {
+  style.fill: "#D9F8FF"
+  style.stroke: "#11BCE6"
+  style.stroke-width: 3
+  style.font-color: "#073349"
+  style.font-size: 15
+  style.bold: true
+  style.border-radius: 12
+  style.shadow: true
+}
+
+rooflock: "04  ROOFLOCK™\nVERIFY THE OUTCOME\n\nROOF RHINO + PARTNER CONFIRM\nTracked origin • agreed criteria\nminimum value • signed agreement\npayment pathway • protected period\nnot excluded by duplicate policy\n\nPASS\nVerified Won Roof" {
+  style.fill: "#0B1C33"
+  style.stroke: "#18D9FF"
+  style.stroke-width: 3
+  style.font-color: "#FFFFFF"
+  style.font-size: 15
+  style.bold: true
+  style.border-radius: 12
+  style.shadow: true
+}
+
+verified: "VERIFIED WON ROOF\nLegitimate roofing business\n\nFEE EVENT\nInvoice Flex or consume\none Roof Credit" {
+  style.fill: "#0BC987"
+  style.stroke: "#078158"
+  style.stroke-width: 3
+  style.font-color: "#04251A"
+  style.font-size: 16
+  style.bold: true
+  style.border-radius: 12
+  style.shadow: true
+}
+
+partner_inputs -> roofmap: "capacity + economics"
+roofmap -> buyerproof: "APPROVED LAUNCH"
+buyerproof -> closeloop: "QUALIFIED HANDOFF"
+closeloop -> rooflock: "SIGNED PROJECT"
+rooflock -> verified: "ALL CRITERIA PASS"
+
+homeowner: "HOMEOWNER\nRaises hand" {
+  shape: person
+  style.fill: "#DDE8F5"
+  style.stroke: "#6B829F"
+  style.font-color: "#14283F"
+  style.font-size: 14
+}
+
+homeowner -> buyerproof: "processed"
+
+not_fit: "NOT A FIT\nExclude — no fee" {
+  style.fill: "#F2F4F7"
+  style.stroke: "#8997AA"
+  style.font-color: "#425166"
+  style.font-size: 13
+  style.border-radius: 8
+}
+
+nurture: "NOT READY\nReturn to nurture — no fee" {
+  style.fill: "#FFF4E5"
+  style.stroke: "#DC8A18"
+  style.font-color: "#6E3A00"
+  style.font-size: 13
+  style.border-radius: 8
+}
+
+lost: "LOST\nReason recorded — no fee" {
+  style.fill: "#F2F4F7"
+  style.stroke: "#8997AA"
+  style.font-color: "#425166"
+  style.font-size: 13
+  style.border-radius: 8
+}
+
+covered_failure: "COVERED FAILURE\nReject or credit back\nNo earned fee" {
+  style.fill: "#FFF4E5"
+  style.stroke: "#DC8A18"
+  style.font-color: "#6E3A00"
+  style.font-size: 13
+  style.border-radius: 8
+}
+
+buyerproof -> not_fit: "invalid"
+closeloop -> nurture: "not ready"
+closeloop -> lost: "lost"
+rooflock -> covered_failure: "criteria fail"
+
+controls: "SYSTEM CONTROLS\n\nPARTNER STATUS\nLicensing • insurance • inspection capacity\ntimely estimates • follow-up • accurate data\nprofessional fulfillment\n\nFIRST ROOF GUARANTEE™\nIf no Verified Won Roof by day 45 and\nrequirements were maintained: continue at no\nadded performance cost OR return unearned credits\n\nFEEDBACK LOOP\nAttribution, dispositions, show rate, close rate,\nand economics improve the next cycle" {
+  style.fill: "#07172B"
+  style.stroke: "#496A90"
+  style.stroke-width: 2
+  style.font-color: "#FFFFFF"
+  style.font-size: 14
+  style.border-radius: 12
+}
+
+roofmap -> controls: "activate controls" {
+  style.stroke-dash: 6
+  style.stroke: "#6B829F"
+  style.font-color: "#53647A"
+}
+
+rooflock -> controls: "measure + improve" {
+  style.stroke-dash: 6
+  style.stroke: "#6B829F"
+  style.font-color: "#53647A"
+}
+
+fee_rule: |md
+  **THE ONLY FEE TRIGGER**  →  A qualifying signed roofing customer that passes every RoofLock™ condition.
+| {
+  near: bottom-center
+  shape: text
+  style.font-size: 17
+  style.bold: true
+  style.font-color: "#0054D8"
+}
+
+legend: |md
+  **COLOR KEY**  Blue = Roof Rhino  •  Navy = Roofing Partner / shared verification  •  Cyan = shared conversion  •  Green = verified outcome
+| {
+  near: bottom-left
+  shape: text
+  style.font-size: 13
+  style.font-color: "#53647A"
+}
