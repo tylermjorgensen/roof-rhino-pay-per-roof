@@ -1,22 +1,20 @@
 {
-  "reference": {
-    "source": "sites-leadconnectorhq-com-preview-w9OW0CQLdsi5PkkuJAk3.pdf and pasted-image.png",
-    "structuralMatch": "pass",
-    "matchedPatterns": [
-      "centered dark authority hero",
-      "three proof tiles",
-      "benefit panel and framework overview",
-      "chronological light/dark process sections",
-      "guarantee block",
-      "centered offer-name reveal button",
-      "pricing expands directly beneath the button",
-      "case-study and feedback proof section"
+  "designDirection": {
+    "name": "restrained editorial B2B",
+    "intent": "Remove templated funnel and AI-generated visual cues while preserving the approved sales sequence.",
+    "changes": [
+      "replaced condensed all-caps typography with sentence-case IBM Plex Sans",
+      "removed decorative gradients, glows, badges, and repetitive card containers",
+      "replaced boxed process sections with one ruled chronological narrative",
+      "replaced pricing cards with a professional comparison table",
+      "limited the palette to navy, warm neutral, and one blue accent"
     ]
   },
   "desktop": {
     "viewport": "1440x900",
     "screenshot": "qa/desktop-1440x900-final.png",
     "offerScreenshot": "qa/desktop-offer-expanded.png",
+    "mapScreenshot": "qa/desktop-map-1440x900.png",
     "layout": "pass",
     "typography": "pass",
     "contrast": "pass",
@@ -27,10 +25,12 @@
     "viewport": "375x812",
     "screenshot": "qa/mobile-375x812-final.png",
     "offerScreenshot": "qa/mobile-offer-expanded-375x812.png",
+    "mapScreenshot": "qa/mobile-map-375x812.png",
     "layout": "pass",
     "horizontalOverflow": false,
     "typography": "pass",
     "assets": "pass",
+    "visibleTapTargets": "42px minimum header control; 52px primary controls",
     "offerReveal": "pass"
   },
   "content": {
