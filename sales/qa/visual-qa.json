@@ -1,42 +1,58 @@
 {
   "reference": {
-    "source": "/var/lib/tyler-workspace/state/media/0e48b0f1-4bf9-46bd-9f60-b400e1b2c7ee.pdf",
-    "pagesReviewed": [1, 2, 3, 4, 5, 6, 7, 9, 10],
+    "source": "https://conversionspark.io/",
+    "reviewedAt": "2026-08-28",
     "structuralMatch": "pass",
-    "notes": "Matched the reference's dark opener, proof tiles, four-part overview, alternating detailed steps, ownership section, economics and guarantee block, dense closing wall, and expandable pricing presentation. Ascension claims were replaced with Roof Rhino's approved offer terms."
+    "matchedElements": [
+      "sticky dark navigation",
+      "photographic hero with centered offer",
+      "trust and metric bands",
+      "side-by-side old-way comparison",
+      "four-stage visual system",
+      "platform pipeline presentation",
+      "case-study layouts",
+      "team and review proof sections",
+      "business-model timeline",
+      "interactive calculator",
+      "FAQ accordion",
+      "photographic closing CTA"
+    ],
+    "notes": "The reference supplied the layout, section order, density, and interaction patterns. All brand language, claims, offer mechanics, logo assets, and pricing are Roof Rhino originals. Proof is clearly labeled as placeholder content."
   },
   "desktop": {
     "viewport": "1440x900",
     "screenshots": [
-      "desktop-hero.png",
-      "desktop-bottom.png",
-      "desktop-pricing.png"
+      "cs-desktop-hero.png",
+      "cs-desktop-full.png",
+      "cs-desktop-pricing.png",
+      "cs-desktop-dialog.png"
     ],
     "horizontalOverflow": false,
     "brokenImages": 0,
     "pricingReveal": "pass",
-    "pricingButtonsVisible": 1,
-    "pricingButtonPlacement": "bottom closing section",
-    "pricingDrawerPlacement": "directly after closing section"
+    "underwritingDialog": "pass",
+    "pricingCards": 3
   },
   "mobile": {
     "viewport": "375x812",
     "screenshots": [
-      "mobile-hero.png",
-      "mobile-bottom.png",
-      "mobile-pricing.png"
+      "cs-mobile-hero.png",
+      "cs-mobile-menu.png",
+      "cs-mobile-pricing.png"
     ],
     "horizontalOverflow": false,
     "brokenImages": 0,
+    "mobileMenu": "pass",
     "pricingReveal": "pass",
-    "underwritingDialog": "pass"
+    "pricingCards": 3
   },
   "content": {
-    "placeholderCopy": false,
+    "unlabeledPlaceholderCopy": false,
     "inventedCustomerResults": false,
+    "proofPlaceholdersLabeled": true,
     "illustrativeEconomicsLabeled": true,
-    "ctaVisible": true,
-    "pricingButtonOnlyAtBottom": true
+    "pricingButtonAtBottom": true,
+    "calculator": "pass"
   },
   "hardFails": [],
   "softFails": [],
