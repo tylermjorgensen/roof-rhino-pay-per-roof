@@ -1,85 +1,45 @@
 {
-  "run_date": "2026-08-28",
-  "status": "pass",
-  "targets": {
-    "desktop": {
-      "viewport": "1440x900",
-      "screenshot": "qa/desktop-1440x900-final.png",
-      "page_height_px": 5365,
-      "horizontal_overflow": false,
-      "broken_images": 0
-    },
-    "mobile": {
-      "viewport": "375x812",
-      "screenshot": "qa/mobile-375x812-final.png",
-      "page_height_px": 6688,
-      "horizontal_overflow": false,
-      "broken_images": 0,
-      "tap_targets_below_44px": 0
-    },
-    "diagram": {
-      "source": "artifacts/diagrams/pay-per-roof-engine.d2",
-      "svg": "artifacts/diagrams/pay-per-roof-engine.svg",
-      "png": "artifacts/diagrams/pay-per-roof-engine.png",
-      "png_dimensions": "4820x7440",
-      "overlapping_nodes_or_labels": false,
-      "cropped_content": false,
-      "unresolved_branches": false,
-      "reading_order": "left-to-right within each stage, then top-to-bottom",
-      "ownership_lanes": ["Roof Rhino", "Roofing Partner", "Gate + handoff"],
-      "exception_routes": 4,
-      "system_controls": 3
-    },
-    "desktop_map_modal": {
-      "viewport": "1440x900",
-      "screenshot": "qa/desktop-map-1440x900.png",
-      "dialog_opened_by_trusted_click": true,
-      "asset_loaded": true,
-      "horizontal_overflow": false
-    },
-    "mobile_map_modal": {
-      "viewport": "375x812",
-      "screenshot": "qa/mobile-map-375x812.png",
-      "dialog_opened_by_trusted_click": true,
-      "asset_loaded": true,
-      "intentional_pan_for_full_matrix": true,
-      "full_size_action_visible": true,
-      "tap_targets_below_40px": 0
-    }
+  "reference": {
+    "source": "sites-leadconnectorhq-com-preview-w9OW0CQLdsi5PkkuJAk3.pdf and pasted-image.png",
+    "structuralMatch": "pass",
+    "matchedPatterns": [
+      "centered dark authority hero",
+      "three proof tiles",
+      "benefit panel and framework overview",
+      "chronological light/dark process sections",
+      "guarantee block",
+      "centered offer-name reveal button",
+      "pricing expands directly beneath the button",
+      "case-study and feedback proof section"
+    ]
   },
-  "functional_checks": {
-    "html_validate": "pass",
-    "javascript_syntax": "pass",
-    "empty_links": 0,
-    "main_sections": 7,
-    "underwriting_modal": "pass with trusted user click",
-    "roof_economics_calculator": "pass with trusted plan selection",
-    "rooflock_terms_modal": "pass with trusted user click",
-    "system_map_modal": "pass on desktop and mobile",
-    "system_map_asset": "loaded",
-    "system_map_full_size_link": "pass",
-    "system_map_png_download": "pass"
+  "desktop": {
+    "viewport": "1440x900",
+    "screenshot": "qa/desktop-1440x900-final.png",
+    "offerScreenshot": "qa/desktop-offer-expanded.png",
+    "layout": "pass",
+    "typography": "pass",
+    "contrast": "pass",
+    "assets": "pass",
+    "offerReveal": "pass"
   },
-  "content_checks": {
-    "pricing_math": "pass",
-    "calculator_math": "pass",
-    "rooflock_fee_trigger_consistency": "pass",
-    "guarantee_conditions_consistency": "pass",
-    "partner_responsibility_split": "pass",
-    "unverified_testimonials": 0,
-    "illustrative_economics_disclosure": "visible and explicit"
+  "mobile": {
+    "viewport": "375x812",
+    "screenshot": "qa/mobile-375x812-final.png",
+    "offerScreenshot": "qa/mobile-offer-expanded-375x812.png",
+    "layout": "pass",
+    "horizontalOverflow": false,
+    "typography": "pass",
+    "assets": "pass",
+    "offerReveal": "pass"
   },
-  "design_changes": [
-    "Rebuilt the page around one promise: the fee is earned when the roof is signed and funded",
-    "Added a visual payment-trigger comparison against retainers, leads, and appointments",
-    "Replaced illustrative testimonial copy with a live contract-economics calculator",
-    "Rebuilt the operating map as a fixed four-stage responsibility matrix",
-    "Separated Roof Rhino actions, roofing-partner actions, stage gates, exception routes, and system controls",
-    "Changed the map from a panoramic chain to a readable portrait operating board",
-    "Kept exact verification terms and the full operating map available on demand",
-    "Limited the palette to deep navy, off-white, and one electric-blue action color"
-  ],
-  "remaining_hard_fails": [],
-  "soft_fails": [],
-  "release_note": "Sales-call concept presentation. Example economics are illustrative and must not be represented as customer results."
+  "content": {
+    "placeholderCopy": false,
+    "brokenImages": false,
+    "testimonialDisclosurePresent": true,
+    "illustrativeEconomicsDisclosurePresent": true
+  },
+  "hardFails": [],
+  "softFails": [],
+  "verdict": "pass"
 }

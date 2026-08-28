@@ -2,41 +2,8 @@ const underwritingDialog = document.getElementById("underwriting-dialog");
 const termsDialog = document.getElementById("terms-dialog");
 const mapDialog = document.getElementById("map-dialog");
 const copyChecklistButton = document.getElementById("copy-checklist");
-const contractValueInput = document.getElementById("contract-value");
-const feeOutput = document.getElementById("fee-output");
-const multipleOutput = document.getElementById("multiple-output");
-const remainderOutput = document.getElementById("remainder-output");
-const planButtons = [...document.querySelectorAll("[data-fee]")];
-
-let selectedFee = 3000;
-
-const formatCurrency = (value) =>
-  new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    maximumFractionDigits: 0,
-  }).format(value);
-
-const updateEconomics = () => {
-  const contractValue = Math.max(Number(contractValueInput.value) || 0, 0);
-  const multiple = selectedFee > 0 ? contractValue / selectedFee : 0;
-  const remainder = Math.max(contractValue - selectedFee, 0);
-
-  feeOutput.textContent = formatCurrency(selectedFee);
-  multipleOutput.textContent = `${multiple.toFixed(1)}×`;
-  remainderOutput.textContent = formatCurrency(remainder);
-};
-
-planButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    selectedFee = Number(button.dataset.fee);
-    planButtons.forEach((item) => item.classList.toggle("is-selected", item === button));
-    updateEconomics();
-  });
-});
-
-contractValueInput.addEventListener("input", updateEconomics);
-updateEconomics();
+const offerToggle = document.getElementById("offer-toggle");
+const offerPanel = document.getElementById("offer-panel");
 
 const bindDialog = ({ dialog, openSelector, closeSelector }) => {
   document.querySelectorAll(openSelector).forEach((button) => {
@@ -66,6 +33,23 @@ bindDialog({
   dialog: mapDialog,
   openSelector: "[data-open-map]",
   closeSelector: "[data-close-map]",
+});
+
+offerToggle.addEventListener("click", () => {
+  const willOpen = offerToggle.getAttribute("aria-expanded") !== "true";
+
+  offerToggle.setAttribute("aria-expanded", String(willOpen));
+  offerPanel.setAttribute("aria-hidden", String(!willOpen));
+  offerPanel.classList.toggle("is-open", willOpen);
+
+  if (willOpen) {
+    offerPanel.removeAttribute("inert");
+    window.setTimeout(() => {
+      offerPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 220);
+  } else {
+    offerPanel.setAttribute("inert", "");
+  }
 });
 
 copyChecklistButton.addEventListener("click", async () => {
