@@ -1,21 +1,25 @@
-const offerButton = document.querySelector("[data-toggle-offer]");
+const pricingButtons = document.querySelectorAll("[data-toggle-pricing]");
 const pricingDrawer = document.getElementById("pricing-drawer");
 const underwritingDialog = document.getElementById("underwriting-dialog");
 const copyChecklistButton = document.getElementById("copy-checklist");
 
-offerButton.addEventListener("click", () => {
-  const willOpen = offerButton.getAttribute("aria-expanded") !== "true";
+pricingButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const willOpen = pricingDrawer.getAttribute("aria-hidden") === "true";
 
-  offerButton.setAttribute("aria-expanded", String(willOpen));
-  pricingDrawer.setAttribute("aria-hidden", String(!willOpen));
-  pricingDrawer.classList.toggle("is-open", willOpen);
+    pricingButtons.forEach((pricingButton) => {
+      pricingButton.setAttribute("aria-expanded", String(willOpen));
+    });
+    pricingDrawer.setAttribute("aria-hidden", String(!willOpen));
+    pricingDrawer.classList.toggle("is-open", willOpen);
 
-  if (willOpen) {
-    pricingDrawer.removeAttribute("inert");
-    window.setTimeout(() => pricingDrawer.scrollIntoView({ behavior: "smooth", block: "start" }), 180);
-  } else {
-    pricingDrawer.setAttribute("inert", "");
-  }
+    if (willOpen) {
+      pricingDrawer.removeAttribute("inert");
+      window.setTimeout(() => pricingDrawer.scrollIntoView({ behavior: "smooth", block: "start" }), 180);
+    } else {
+      pricingDrawer.setAttribute("inert", "");
+    }
+  });
 });
 
 document.querySelectorAll("[data-open-underwriting]").forEach((button) => {

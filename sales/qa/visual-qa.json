@@ -14,7 +14,8 @@
     ],
     "horizontalOverflow": false,
     "brokenImages": 0,
-    "pricingReveal": "pass"
+    "pricingReveal": "pass",
+    "pricingButtonsVisible": 2
   },
   "mobile": {
     "viewport": "375x812",
@@ -33,7 +34,9 @@
     "placeholderCopy": false,
     "inventedCustomerResults": false,
     "illustrativeEconomicsLabeled": true,
-    "ctaVisible": true
+    "ctaVisible": true,
+    "heroPricingButtonVisible": true,
+    "pricingControlsSynchronized": true
   },
   "hardFails": [],
   "softFails": [],

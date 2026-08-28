@@ -70,7 +70,12 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--blue-light); ou
 .hero h1 { margin-bottom: 20px; font-size: clamp(44px, 7.2vw, 80px); line-height: .98; letter-spacing: -.055em; }
 .hero h1 em { color: var(--blue-light); font-style: normal; }
 .hero__sub { max-width: 730px; margin: 0 auto; color: #c0c4ca; font-size: 15px; font-weight: 600; }
-.hero-stats { margin-top: 47px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.hero-pricing-button { min-height: 54px; margin-top: 28px; padding: 0 31px; color: var(--white); background: var(--blue); border: 0; border-radius: 8px; cursor: pointer; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .025em; transition: background .18s ease, transform .18s ease; }
+.hero-pricing-button:hover { background: #0568df; transform: translateY(-1px); }
+.hero-pricing-button span { margin-left: 9px; display: inline-block; transition: transform .25s ease; }
+.hero-pricing-button[aria-expanded="true"] span { transform: rotate(180deg); }
+.hero-pricing-note { margin: 9px 0 0; color: #8f969f; font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+.hero-stats { margin-top: 39px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .hero-stats div { min-height: 100px; padding: 19px; display: grid; grid-template-columns: auto 1fr; gap: 13px; align-items: center; text-align: left; color: var(--ink); background: var(--paper); border: 2px solid #d5e8ff; border-radius: 9px; }
 .hero-stats strong { min-width: 65px; color: var(--blue); font-size: 30px; line-height: 1; text-align: center; }
 .hero-stats span { font-size: 10px; font-weight: 800; line-height: 1.35; text-transform: uppercase; }
@@ -216,6 +221,7 @@ dialog small { margin-top: 13px; display: block; color: #858c96; font-size: 8px;
   .hero__logo { height: 102px; }
   .hero h1 { font-size: 45px; }
   .hero__sub { font-size: 12px; }
+  .hero-pricing-button { width: 100%; min-height: 52px; margin-top: 23px; }
   .hero-stats div { min-height: 82px; }
   .formula { padding: 45px 0 42px; }
   .formula h2, .framework-banner h2, .step h2, .ownership-panel h2, .outcomes h2, .final-cta h2 { font-size: 31px; }
