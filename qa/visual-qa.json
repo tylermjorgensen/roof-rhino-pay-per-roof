@@ -31,10 +31,9 @@
     "d2_compile": "pass",
     "empty_links": 0,
     "placeholder_copy_hits": 0,
-    "faq_toggle": "pass",
-    "plan_selection_state": "pass",
-    "system_map_modal": "pass",
-    "underwriting_modal": "pass",
+    "main_sections": 7,
+    "system_map_modal": "pass with trusted user click",
+    "underwriting_modal": "pass with trusted user click",
     "clipboard_action": "pass with trusted user click"
   },
   "content_checks": {
@@ -45,14 +44,14 @@
     "illustrative_proof_disclosure": "visible and explicit"
   },
   "hard_fails_fixed": [
-    "Removed horizontal overflow from decorative elements",
-    "Removed reveal-state blank sections from full-page rendering",
-    "Recomposed the initial over-wide system diagram",
-    "Raised mobile interactive targets to at least 44px",
-    "Replaced non-semantic comparison/list markup with native elements",
-    "Added a local-preview clipboard fallback"
+    "Cut desktop page height from 8278px to 5786px",
+    "Cut mobile page height from 12506px to 6477px",
+    "Reduced the main pitch to one narrative and one primary action",
+    "Moved detailed operational logic behind the system-map action",
+    "Removed duplicated comparison, partner-fit, inclusion, and FAQ copy",
+    "Kept all mobile interactive targets at or above 44px"
   ],
   "remaining_hard_fails": [],
   "soft_fails": [],
-  "release_note": "Illustrative scenarios and composite quotes must be replaced with verified customer evidence before public advertising."
+  "release_note": "The redesign is intentionally minimal. Illustrative contractor perspectives must be replaced with verified customer evidence before public advertising."
 }
