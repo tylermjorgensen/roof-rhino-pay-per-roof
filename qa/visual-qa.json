@@ -21,10 +21,30 @@
       "source": "artifacts/diagrams/pay-per-roof-engine.d2",
       "svg": "artifacts/diagrams/pay-per-roof-engine.svg",
       "png": "artifacts/diagrams/pay-per-roof-engine.png",
-      "png_dimensions": "12372x2994",
+      "png_dimensions": "4820x7440",
       "overlapping_nodes_or_labels": false,
       "cropped_content": false,
-      "unresolved_branches": false
+      "unresolved_branches": false,
+      "reading_order": "left-to-right within each stage, then top-to-bottom",
+      "ownership_lanes": ["Roof Rhino", "Roofing Partner", "Gate + handoff"],
+      "exception_routes": 4,
+      "system_controls": 3
+    },
+    "desktop_map_modal": {
+      "viewport": "1440x900",
+      "screenshot": "qa/desktop-map-1440x900.png",
+      "dialog_opened_by_trusted_click": true,
+      "asset_loaded": true,
+      "horizontal_overflow": false
+    },
+    "mobile_map_modal": {
+      "viewport": "375x812",
+      "screenshot": "qa/mobile-map-375x812.png",
+      "dialog_opened_by_trusted_click": true,
+      "asset_loaded": true,
+      "intentional_pan_for_full_matrix": true,
+      "full_size_action_visible": true,
+      "tap_targets_below_40px": 0
     }
   },
   "functional_checks": {
@@ -35,8 +55,10 @@
     "underwriting_modal": "pass with trusted user click",
     "roof_economics_calculator": "pass with trusted plan selection",
     "rooflock_terms_modal": "pass with trusted user click",
-    "system_map_modal": "pass",
-    "system_map_asset": "loaded"
+    "system_map_modal": "pass on desktop and mobile",
+    "system_map_asset": "loaded",
+    "system_map_full_size_link": "pass",
+    "system_map_png_download": "pass"
   },
   "content_checks": {
     "pricing_math": "pass",
@@ -51,7 +73,9 @@
     "Rebuilt the page around one promise: the fee is earned when the roof is signed and funded",
     "Added a visual payment-trigger comparison against retainers, leads, and appointments",
     "Replaced illustrative testimonial copy with a live contract-economics calculator",
-    "Condensed the operating engine into four checkpoints with a clear ownership split",
+    "Rebuilt the operating map as a fixed four-stage responsibility matrix",
+    "Separated Roof Rhino actions, roofing-partner actions, stage gates, exception routes, and system controls",
+    "Changed the map from a panoramic chain to a readable portrait operating board",
     "Kept exact verification terms and the full operating map available on demand",
     "Limited the palette to deep navy, off-white, and one electric-blue action color"
   ],

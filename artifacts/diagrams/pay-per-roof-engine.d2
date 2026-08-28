@@ -1,169 +1,196 @@
-direction: right
+direction: down
 
 title: |md
-  # PAY PER ROOF™ — ONE ENGINE, ONE FEE TRIGGER
-  Internal execution + roofing-partner handoff + homeowner journey
+  # PAY PER ROOF™ OPERATING SYSTEM
+  **Who owns what, when it happens, and what unlocks the next stage.**
 | {
   near: top-center
   shape: text
-  style.font-size: 30
+  style.font-size: 28
   style.bold: true
   style.font-color: "#07172B"
 }
 
-partner_inputs: "ROOFING PARTNER\nTerritory • capacity • close rate\nproject value • production" {
-  style.fill: "#0B1C33"
-  style.stroke: "#0B1C33"
-  style.font-color: "#FFFFFF"
+instruction: |md
+  **USE LEFT → RIGHT, THEN MOVE DOWN.** Complete both owner columns. Advance only after the stage gate passes.
+| {
+  shape: text
   style.font-size: 15
-  style.bold: true
-  style.border-radius: 9
+  style.font-color: "#42566F"
 }
 
-roofmap: "01  ROOFMAP™\nUNDERWRITE THE MARKET\n\nROOF RHINO\nModel territory, competition,\ncapacity, value, and economics\n\nDECISION GATE\nApprove • adjust • decline\n\nOUTPUT\nQualifying-roof definition, price,\nLaunch Date, protected territory" {
-  style.fill: "#EAF3FF"
-  style.stroke: "#0878FF"
-  style.stroke-width: 3
-  style.font-color: "#0B294B"
-  style.font-size: 15
-  style.bold: true
+board: "" {
+  grid-columns: 4
+  grid-gap: 14
+  style.fill: "#F5F8FC"
+  style.stroke: "#C8D5E5"
+  style.stroke-width: 2
   style.border-radius: 12
-  style.shadow: true
+
+  stage_column: "" {
+    grid-columns: 1
+    grid-gap: 10
+    style.fill: "#F5F8FC"
+    style.stroke: "#F5F8FC"
+    header: "STAGE" {style.fill: "#07172B"; style.stroke: "#07172B"; style.font-color: "#7EDFFF"; style.font-size: 15; style.bold: true; style.border-radius: 8}
+    s1: "01\nROOFMAP™\nUNDERWRITE" {style.fill: "#EAF3FF"; style.stroke: "#0878FF"; style.stroke-width: 3; style.font-color: "#082A51"; style.font-size: 18; style.bold: true; style.border-radius: 8}
+    s2: "02\nBUYERPROOF™\nACQUIRE + QUALIFY" {style.fill: "#0878FF"; style.stroke: "#0054D8"; style.stroke-width: 3; style.font-color: "#FFFFFF"; style.font-size: 18; style.bold: true; style.border-radius: 8}
+    s3: "03\nCLOSELOOP™\nINSPECT + CLOSE" {style.fill: "#D9F8FF"; style.stroke: "#11BCE6"; style.stroke-width: 3; style.font-color: "#073349"; style.font-size: 18; style.bold: true; style.border-radius: 8}
+    s4: "04\nROOFLOCK™\nVERIFY + EARN" {style.fill: "#0B1C33"; style.stroke: "#18D9FF"; style.stroke-width: 3; style.font-color: "#FFFFFF"; style.font-size: 18; style.bold: true; style.border-radius: 8}
+  }
+
+  rhino_column: "" {
+    grid-columns: 1
+    grid-gap: 10
+    style.fill: "#F5F8FC"
+    style.stroke: "#F5F8FC"
+    header: "ROOF RHINO OWNS" {style.fill: "#0878FF"; style.stroke: "#0054D8"; style.font-color: "#FFFFFF"; style.font-size: 15; style.bold: true; style.border-radius: 8}
+    r1: "ANALYZE\n• Territory + competition\n• Capacity + close rate\n• Project value + economics" {style.fill: "#FFFFFF"; style.stroke: "#A8C9F4"; style.font-color: "#183653"; style.font-size: 15; style.border-radius: 8}
+    r2: "CREATE + PROCESS DEMAND\n• Launch approved channels\n• Respond, call, and text\n• Verify BuyerProof criteria" {style.fill: "#FFFFFF"; style.stroke: "#A8C9F4"; style.font-color: "#183653"; style.font-size: 15; style.border-radius: 8}
+    r3: "COORDINATE CONVERSION\n• Book + confirm inspection\n• Remind, recover, reschedule\n• Nurture until disposition" {style.fill: "#FFFFFF"; style.stroke: "#A8C9F4"; style.font-color: "#183653"; style.font-size: 15; style.border-radius: 8}
+    r4: "AUDIT THE OUTCOME\n• Confirm tracked origin\n• Test all 6 RoofLock conditions\n• Invoice or consume 1 credit" {style.fill: "#FFFFFF"; style.stroke: "#A8C9F4"; style.font-color: "#183653"; style.font-size: 15; style.border-radius: 8}
+  }
+
+  partner_column: "" {
+    grid-columns: 1
+    grid-gap: 10
+    style.fill: "#F5F8FC"
+    style.stroke: "#F5F8FC"
+    header: "ROOFING PARTNER OWNS" {style.fill: "#0B1C33"; style.stroke: "#0B1C33"; style.font-color: "#FFFFFF"; style.font-size: 15; style.bold: true; style.border-radius: 8}
+    p1: "SUPPLY OPERATING TRUTH\n• Territory + service area\n• Sales + production capacity\n• Close rate + average value" {style.fill: "#FFFFFF"; style.stroke: "#92A5BB"; style.font-color: "#183653"; style.font-size: 15; style.border-radius: 8}
+    p2: "STAY READY TO INSPECT\n• Maintain open appointment slots\n• Keep licensing + insurance active\n• Receive pipeline handoffs" {style.fill: "#FFFFFF"; style.stroke: "#92A5BB"; style.font-color: "#183653"; style.font-size: 15; style.border-radius: 8}
+    p3: "RUN THE ROOF SALE\n• Attend + inspect\n• Scope + estimate\n• Present, follow up, and close" {style.fill: "#FFFFFF"; style.stroke: "#92A5BB"; style.font-color: "#183653"; style.font-size: 15; style.border-radius: 8}
+    p4: "PROVE + FULFILL\n• Signed roofing agreement\n• Confirmed payment pathway\n• Accurate data + delivery" {style.fill: "#FFFFFF"; style.stroke: "#92A5BB"; style.font-color: "#183653"; style.font-size: 15; style.border-radius: 8}
+  }
+
+  gate_column: "" {
+    grid-columns: 1
+    grid-gap: 10
+    style.fill: "#F5F8FC"
+    style.stroke: "#F5F8FC"
+    header: "GATE + HANDOFF" {style.fill: "#DCE6F2"; style.stroke: "#90A6BD"; style.font-color: "#17344F"; style.font-size: 15; style.bold: true; style.border-radius: 8}
+    g1: "MARKET APPROVED\nCriteria + fee defined\nLaunch Date set\nTerritory protected\n\nNEXT → APPROVED LAUNCH" {style.fill: "#EAF3FF"; style.stroke: "#0878FF"; style.font-color: "#082A51"; style.font-size: 15; style.bold: true; style.border-radius: 8}
+    g2: "OPPORTUNITY VERIFIED\nOwner • location • need\nproject type • timing\npayment path • availability\n\nNEXT → QUALIFIED HANDOFF" {style.fill: "#EAF3FF"; style.stroke: "#0878FF"; style.font-color: "#082A51"; style.font-size: 15; style.bold: true; style.border-radius: 8}
+    g3: "PROJECT SIGNED\nInspection complete\nAgreement executed\nPayment path confirmed\n\nNEXT → ROOFLOCK AUDIT" {style.fill: "#EAF3FF"; style.stroke: "#0878FF"; style.font-color: "#082A51"; style.font-size: 15; style.bold: true; style.border-radius: 8}
+    g4: "VERIFIED WON ROOF\nAll 6 conditions pass\nProtected period cleared\nNo excluded duplicate\n\nFEE EARNED" {style.fill: "#0BC987"; style.stroke: "#078158"; style.stroke-width: 3; style.font-color: "#04251A"; style.font-size: 15; style.bold: true; style.border-radius: 8}
+  }
 }
 
-buyerproof: "02  BUYERPROOF™\nACQUIRE + QUALIFY\n\nROOF RHINO\nCreate demand; verify owner, location,\nneed, project type, timing, property,\npayment pathway, and availability\n\nPARTNER\nMaintain inspection capacity\n\nOUTPUT\nVerified roofing opportunity" {
-  style.fill: "#0878FF"
-  style.stroke: "#0054D8"
-  style.stroke-width: 3
-  style.font-color: "#FFFFFF"
-  style.font-size: 15
-  style.bold: true
-  style.border-radius: 12
-  style.shadow: true
-}
-
-closeloop: "03  CLOSELOOP™\nMOVE TO DISPOSITION\n\nROOF RHINO\nCall • text • schedule • confirm\nremind • recover • reschedule • nurture\n\nROOFING PARTNER\nInspect • scope • estimate • present • close\n\nSHARED PIPELINE\nVisible until won, lost, or nurture" {
-  style.fill: "#D9F8FF"
-  style.stroke: "#11BCE6"
-  style.stroke-width: 3
-  style.font-color: "#073349"
-  style.font-size: 15
-  style.bold: true
-  style.border-radius: 12
-  style.shadow: true
-}
-
-rooflock: "04  ROOFLOCK™\nVERIFY THE OUTCOME\n\nROOF RHINO + PARTNER CONFIRM\nTracked origin • agreed criteria\nminimum value • signed agreement\npayment pathway • protected period\nnot excluded by duplicate policy\n\nPASS\nVerified Won Roof" {
-  style.fill: "#0B1C33"
-  style.stroke: "#18D9FF"
-  style.stroke-width: 3
-  style.font-color: "#FFFFFF"
-  style.font-size: 15
-  style.bold: true
-  style.border-radius: 12
-  style.shadow: true
-}
-
-verified: "VERIFIED WON ROOF\nLegitimate roofing business\n\nFEE EVENT\nInvoice Flex or consume\none Roof Credit" {
-  style.fill: "#0BC987"
-  style.stroke: "#078158"
-  style.stroke-width: 3
-  style.font-color: "#04251A"
+exceptions_title: "EXCEPTION ROUTES — STOP THE MAIN FLOW; NEVER FORCE AN OPPORTUNITY FORWARD" {
+  shape: text
   style.font-size: 16
   style.bold: true
+  style.font-color: "#07172B"
+}
+
+exceptions: "" {
+  grid-columns: 2
+  grid-gap: 14
+  style.fill: "#FFF9EF"
+  style.stroke: "#E0C18A"
   style.border-radius: 12
-  style.shadow: true
+
+  e1: "BUYERPROOF FAIL → Exclude from pipeline → NO FEE" {
+    style.fill: "#FFFFFF"
+    style.stroke: "#D89A35"
+    style.font-color: "#68420A"
+    style.font-size: 15
+    style.bold: true
+    style.border-radius: 8
+  }
+  e2: "NOT READY → Return to nurture → NO FEE" {
+    style.fill: "#FFFFFF"
+    style.stroke: "#D89A35"
+    style.font-color: "#68420A"
+    style.font-size: 15
+    style.bold: true
+    style.border-radius: 8
+  }
+  e3: "LOST → Record exact reason → NO FEE" {
+    style.fill: "#FFFFFF"
+    style.stroke: "#D89A35"
+    style.font-color: "#68420A"
+    style.font-size: 15
+    style.bold: true
+    style.border-radius: 8
+  }
+  e4: "ROOFLOCK FAIL / REVERSAL → Reject or credit → NO EARNED FEE" {
+    style.fill: "#FFFFFF"
+    style.stroke: "#D89A35"
+    style.font-color: "#68420A"
+    style.font-size: 15
+    style.bold: true
+    style.border-radius: 8
+  }
 }
 
-partner_inputs -> roofmap: "capacity + economics"
-roofmap -> buyerproof: "APPROVED LAUNCH"
-buyerproof -> closeloop: "QUALIFIED HANDOFF"
-closeloop -> rooflock: "SIGNED PROJECT"
-rooflock -> verified: "ALL CRITERIA PASS"
-
-homeowner: "HOMEOWNER\nRaises hand" {
-  shape: person
-  style.fill: "#DDE8F5"
-  style.stroke: "#6B829F"
-  style.font-color: "#14283F"
-  style.font-size: 14
+controls_title: "SYSTEM CONTROLS — ACTIVE ACROSS ALL FOUR STAGES" {
+  shape: text
+  style.font-size: 16
+  style.bold: true
+  style.font-color: "#07172B"
 }
 
-homeowner -> buyerproof: "processed"
-
-not_fit: "NOT A FIT\nExclude — no fee" {
-  style.fill: "#F2F4F7"
-  style.stroke: "#8997AA"
-  style.font-color: "#425166"
-  style.font-size: 13
-  style.border-radius: 8
-}
-
-nurture: "NOT READY\nReturn to nurture — no fee" {
-  style.fill: "#FFF4E5"
-  style.stroke: "#DC8A18"
-  style.font-color: "#6E3A00"
-  style.font-size: 13
-  style.border-radius: 8
-}
-
-lost: "LOST\nReason recorded — no fee" {
-  style.fill: "#F2F4F7"
-  style.stroke: "#8997AA"
-  style.font-color: "#425166"
-  style.font-size: 13
-  style.border-radius: 8
-}
-
-covered_failure: "COVERED FAILURE\nReject or credit back\nNo earned fee" {
-  style.fill: "#FFF4E5"
-  style.stroke: "#DC8A18"
-  style.font-color: "#6E3A00"
-  style.font-size: 13
-  style.border-radius: 8
-}
-
-buyerproof -> not_fit: "invalid"
-closeloop -> nurture: "not ready"
-closeloop -> lost: "lost"
-rooflock -> covered_failure: "criteria fail"
-
-controls: "SYSTEM CONTROLS\n\nPARTNER STATUS\nLicensing • insurance • inspection capacity\ntimely estimates • follow-up • accurate data\nprofessional fulfillment\n\nFIRST ROOF GUARANTEE™\nIf no Verified Won Roof by day 45 and\nrequirements were maintained: continue at no\nadded performance cost OR return unearned credits\n\nFEEDBACK LOOP\nAttribution, dispositions, show rate, close rate,\nand economics improve the next cycle" {
-  style.fill: "#07172B"
-  style.stroke: "#496A90"
-  style.stroke-width: 2
-  style.font-color: "#FFFFFF"
-  style.font-size: 14
+controls: "" {
+  grid-columns: 3
+  grid-gap: 14
+  style.fill: "#EEF3F8"
+  style.stroke: "#C8D5E5"
   style.border-radius: 12
-}
 
-roofmap -> controls: "activate controls" {
-  style.stroke-dash: 6
-  style.stroke: "#6B829F"
-  style.font-color: "#53647A"
-}
-
-rooflock -> controls: "measure + improve" {
-  style.stroke-dash: 6
-  style.stroke: "#6B829F"
-  style.font-color: "#53647A"
+  c1: "PARTNER STATUS\nLicensing • insurance • capacity\nattendance • estimates • follow-up\naccurate pipeline data • fulfillment" {
+    style.fill: "#FFFFFF"
+    style.stroke: "#90A6BD"
+    style.font-color: "#183653"
+    style.font-size: 14
+    style.bold: true
+    style.border-radius: 8
+  }
+  c2: "FIRST ROOF GUARANTEE™\nNo verified roof by day 45 + requirements met:\ncontinue at no added performance cost OR\nreturn unearned prepaid Roof Credits" {
+    style.fill: "#EAF3FF"
+    style.stroke: "#0878FF"
+    style.font-color: "#082A51"
+    style.font-size: 14
+    style.bold: true
+    style.border-radius: 8
+  }
+  c3: "FEEDBACK LOOP\nTrack attribution • speed • show rate\nclose rate • loss reason • economics\nUse data to improve the next cycle" {
+    style.fill: "#FFFFFF"
+    style.stroke: "#90A6BD"
+    style.font-color: "#183653"
+    style.font-size: 14
+    style.bold: true
+    style.border-radius: 8
+  }
 }
 
 fee_rule: |md
-  **THE ONLY FEE TRIGGER**  →  A qualifying signed roofing customer that passes every RoofLock™ condition.
+  # THE ONLY FEE TRIGGER
+  A tracked, qualifying roofing customer with a signed agreement, confirmed payment pathway, cleared protected period, and no excluded duplicate.
 | {
   near: bottom-center
   shape: text
-  style.font-size: 17
+  style.font-size: 18
   style.bold: true
   style.font-color: "#0054D8"
 }
 
-legend: |md
-  **COLOR KEY**  Blue = Roof Rhino  •  Navy = Roofing Partner / shared verification  •  Cyan = shared conversion  •  Green = verified outcome
-| {
-  near: bottom-left
-  shape: text
-  style.font-size: 13
-  style.font-color: "#53647A"
+# Invisible layout guides keep the reading order vertical without adding visual noise.
+instruction -> board: "" {
+  style.opacity: 0
+}
+board -> exceptions_title: "" {
+  style.opacity: 0
+}
+exceptions_title -> exceptions: "" {
+  style.opacity: 0
+}
+exceptions -> controls_title: "" {
+  style.opacity: 0
+}
+controls_title -> controls: "" {
+  style.opacity: 0
+}
+controls -> fee_rule: "" {
+  style.opacity: 0
 }
